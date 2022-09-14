@@ -8,9 +8,9 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: somewordpress
-      MYSQL_DATABASE: wordpress
-      MYSQL_USER: wordpress
-      MYSQL_PASSWORD: wordpress
+      MYSQL_DATABASE: wordpressdb
+      MYSQL_USER: userwordpress
+      MYSQL_PASSWORD: passwordpress
     
   wordpress:
     depends_on:
@@ -19,9 +19,9 @@ services:
     restart: always
     environment:
       WORDPRESS_DB_HOST: db:3306
-      WORDPRESS_DB_USER: wordpress
-      WORDPRESS_DB_PASSWORD: wordpress
-      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_DB_USER: userwordpress
+      WORDPRESS_DB_PASSWORD: passwordpress
+      WORDPRESS_DB_NAME: wordpressdb
 
   nginx:
     depends_on: 
