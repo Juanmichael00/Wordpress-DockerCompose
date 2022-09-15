@@ -26,7 +26,7 @@ services:
   nginx:
     depends_on: 
       - wordpress
-    image: nginx:1.23.1
+    image: nginx:1.18-alpine
     restart: always
     command: "/bin/sh -c 'nginx -s reload; nginx -g \"daemon off;\"'"
     ports:
